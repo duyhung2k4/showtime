@@ -1,0 +1,28 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: global-env
+data:
+  .env: |
+    # BACKEND
+    PORT=8000
+    MONGODB_URI=mongodb://root:12345678@172.17.8.248:30001/
+    TIME_ZONE=
+
+    # TMDB
+    TMDB_URL=https://api.themoviedb.org/3
+    TMDB_URL_IMG=https://image.tmdb.org/t/p
+    TMDB_KEY=0b268f19bf8c17f3186f35d9eb02dfa4
+
+    # JWT
+    PRIVATE_KEY=sale-ticket-jwt
+    TOKEN_EXPIRATION=3h
+
+    # STRIPE
+    STRIPE_PUBLIC_KEY=pk_test_51SUqDt8PFuv2cNdgp3phonBvQclxWPrIapuk65CKa9UIbJrvWnWCKZ86IWuDQtFQlC9rhLD0YAZDZjy4Q3HqZCBe00xJD80Rew
+    STRIPE_SECRET_KEY=sk_test_51SUqDt8PFuv2cNdgZaRuLqix6L0FoO1UKVwBvMP4cl7KGQIjhwVd1HYfmTZbdkpvaDH0gLV8ljyexlEJ0OiwRJki00nhtUqn5S
+    STRIPE_ENDPOINT_SECRET=whsec_ae98f2dd3d514211b2dcc7095122d99b8baba00b6341b2b555ef793babcb66f4
+
+    # MAIL (Standard: Gmail)
+    MAIL_USERNAME=baba0398262124@gmail.com
+    MAIL_PASSWORD=ncziobsezadwbgvj

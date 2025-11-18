@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: search-api
+  labels:
+    app: search-api
+spec:
+  selector:
+    matchLabels:
+      app: search-api
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: search-api
+    spec:
+      containers:
+        - name: search-api-ctn
+          image: nguyen040904/search-api:latest
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 100m
+              memory: 100Mi
+          ports:
+            - containerPort: 8080
+              name: search-api-port
+          volumeMounts:
+            - name: env
+              mountPath: /app/.env
+              subPath: .env
+      volumes:
+        - name: env
+          configMap:
+            name: global-env
+      restartPolicy: Always

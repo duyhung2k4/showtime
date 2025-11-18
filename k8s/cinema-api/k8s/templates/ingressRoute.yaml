@@ -1,0 +1,15 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: cinema-api-ingress
+spec:
+  entryPoints:
+    - web
+  routes:
+    - kind: Rule
+      match: PathPrefix(`/api/cinemas`)
+      middlewares:
+        - name: strip-api
+      services:
+        - name: cinema-api
+          port: 8000

@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movie-api
+  labels:
+    app: movie-api
+spec:
+  selector:
+    matchLabels:
+      app: movie-api
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: movie-api
+    spec:
+      containers:
+        - name: movie-api-ctn
+          image: nguyen040904/movie-api:latest
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 100m
+              memory: 100Mi
+          ports:
+            - containerPort: 8080
+              name: movie-api-port
+          volumeMounts:
+            - name: env
+              mountPath: /app/.env
+              subPath: .env
+      volumes:
+        - name: env
+          configMap:
+            name: global-env
+      restartPolicy: Always
