@@ -3,7 +3,7 @@ const option = agrs.slice(3, agrs.length);
 
 const apply = async () => {
     try {
-        const buildHelm = await $`helm upgrade --install ui -f k8s/values.yaml -n dev k8s`;
+        const buildHelm = await $`helm upgrade --install user-api -f k8s/values.yaml -n dev k8s`;
         console.log(buildHelm.stdout)
     } catch (error) {
         console.log("ERROR: ", error);
@@ -12,7 +12,7 @@ const apply = async () => {
 
 const stop = async () => {
     try {
-        const stopHelm = await $`helm uninstall ui -n dev`;
+        const stopHelm = await $`helm uninstall user-api -n dev`;
         console.log(stopHelm.stdout)
     } catch (error) {
         console.log("ERROR: ", error);

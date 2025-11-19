@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cinema-api
+  name: screening-api
   labels:
-    app: cinema-api
+    app: screening-api
 spec:
   selector:
     matchLabels:
-      app: cinema-api
+      app: screening-api
   replicas: 1
   strategy:
     rollingUpdate:
@@ -17,11 +17,11 @@ spec:
   template:
     metadata:
       labels:
-        app: cinema-api
+        app: screening-api
     spec:
       containers:
-        - name: cinema-api-ctn
-          image: nguyen040904/cinema-api:latest
+        - name: screening-api-ctn
+          image: nguyen040904/screening-api:latest
           resources:
             requests:
               cpu: 100m
@@ -31,7 +31,7 @@ spec:
               memory: 100Mi
           ports:
             - containerPort: 8000
-              name: cinema-api-port
+              name: screen-api-port
           volumeMounts:
             - name: env
               mountPath: /app/.env

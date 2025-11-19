@@ -3,6 +3,9 @@ import { readdirSync, statSync } from "fs";
 import { join } from "path";
 import { execSync } from "child_process";
 
+const agrs = [...process.argv];
+const option = agrs.slice(3, agrs.length);
+
 const rootDir = new URL('.', import.meta.url).pathname; // thư mục hiện tại
 const services = readdirSync(rootDir, { withFileTypes: true })
     .filter(dirent => dirent.isDirectory())
@@ -23,7 +26,7 @@ for (const service of services) {
     console.log(`\n🚀 Deploying ${service}...`);
     try {
         // Chạy service.mjs bằng node
-        execSync(`zx service.mjs apply`, { stdio: "inherit", cwd: servicePath });
+        execSync(`zx service.mjs ${option}`, { stdio: "inherit", cwd: servicePath });
     } catch (err) {
         console.error(`❌ Error deploying ${service}:`, err.message);
     }

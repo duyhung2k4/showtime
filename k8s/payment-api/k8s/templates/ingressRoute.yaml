@@ -1,0 +1,15 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: payment-api-ingress
+spec:
+  entryPoints:
+    - web
+  routes:
+    - kind: Rule
+      match: PathPrefix(`/api/payment`)
+      middlewares:
+        - name: strip-api
+      services:
+        - name: payment-api
+          port: 8000

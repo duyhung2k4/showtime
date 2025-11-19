@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: screening-api
+spec:
+  selector:
+    app: screening-api
+  type: ClusterIP
+  ports:
+    - name: screening-api
+      protocol: TCP
+      port: 8000
+      targetPort: 8000

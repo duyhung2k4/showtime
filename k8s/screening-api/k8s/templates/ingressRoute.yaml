@@ -1,0 +1,15 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: screening-api-ingress
+spec:
+  entryPoints:
+    - web
+  routes:
+    - kind: Rule
+      match: PathPrefix(`/api/screenings`)
+      middlewares:
+        - name: strip-api
+      services:
+        - name: screening-api
+          port: 8000

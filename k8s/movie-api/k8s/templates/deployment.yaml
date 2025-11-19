@@ -30,7 +30,7 @@ spec:
               cpu: 100m
               memory: 100Mi
           ports:
-            - containerPort: 8080
+            - containerPort: 8000
               name: movie-api-port
           volumeMounts:
             - name: env
