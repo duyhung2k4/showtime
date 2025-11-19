@@ -10,6 +10,7 @@ const mongoose = require("mongoose");
 const mongoString = process.env.MONGODB_URI;
 const cookieParser = require("cookie-parser");
 
+
 mongoose.connect(mongoString);
 const database = mongoose.connection;
 
@@ -20,6 +21,15 @@ database.on("error", (error) => {
 database.once("connected", () => {
   console.log("Database Connected");
 });
+
+require("./models/Cinema");
+require("./models/Movie");
+require("./models/Order");
+require("./models/ScheduledScreening");
+require("./models/Screening");
+require("./models/SeatType");
+require("./models/Ticket");
+require("./models/User");
 
 const app = express();
 const PORT = process.env.PORT || 4000;

@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: strip-api
+  labels:
+    app: strip-api
+spec:
+  selector:
+    matchLabels:
+      app: strip-api
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: strip-api
+    spec:
+      containers:
+        - name: strip-api-ctn
+          image: nguyen040904/strip-api:latest
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 100m
+              memory: 100Mi
+          env:
+            - name: STRIPE_API_KEY
+              value: sk_test_51SUqDt8PFuv2cNdgZaRuLqix6L0FoO1UKVwBvMP4cl7KGQIjhwVd1HYfmTZbdkpvaDH0gLV8ljyexlEJ0OiwRJki00nhtUqn5S
+          ports:
+            - containerPort: 8000
+              name: strip-api-port
+          volumeMounts:
+            - name: env
+              mountPath: /app/.env
+              subPath: .env
+      volumes:
+        - name: env
+          configMap:
+            name: global-env
+      restartPolicy: Always

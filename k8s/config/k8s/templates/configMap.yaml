@@ -7,7 +7,7 @@ data:
     # BACKEND
     PORT=8000
     FRONTEND_URL=http://172.17.8.248:30030
-    MONGODB_URI=mongodb://root:12345678@172.17.8.248:30001/
+    MONGODB_URI=mongodb://root:12345678@mongo-ha-mongodb-headless:27017/
     TIME_ZONE=
 
     # TMDB
