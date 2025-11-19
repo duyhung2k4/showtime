@@ -23,4 +23,4 @@ ENV PATH="/stripe:${PATH}"
 EXPOSE 8000
 
 # Lệnh chạy khi container start
-CMD ["sh", "-c", "stripe listen --api-key $STRIPE_API_KEY --forward-to http://payment-api:8000/api/payment/webhook"]
+CMD ["sh", "-c", "stripe listen --api-key $STRIPE_API_KEY --forward-to http://payment-api:8000/payment/webhook"]
