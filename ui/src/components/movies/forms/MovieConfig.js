@@ -41,11 +41,11 @@ const MovieConfig = (props) => {
 
   return (
     <React.Fragment>
-      <label htmlFor="searchMovie">Film in Datenbank suchen</label>
+      <label htmlFor="searchMovie">Tìm kiếm phim trong cơ sở dữ liệu</label>
       <SearchInput
         className="mt-2"
-        placeholder="Suche"
-        aria-label="Suche"
+        placeholder="Nhập tên phim"
+        aria-label="Nhập tên phim"
         onChange={(e) => setSearchInput(e.target.value)}
         onKeyDown={onSearchInput}
         onClick={searchMovieHandler}

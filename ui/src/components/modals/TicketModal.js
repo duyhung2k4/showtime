@@ -24,7 +24,7 @@ const TicketModal = (props) => {
             <h2>{ticket.movie.title}</h2>
             <h3>{ticket.cinema}</h3>
             <h3>{new Date(ticket.datetime).toLocaleString()}</h3>
-            <h3 className="mt-4 mb-3">Sitzplätze</h3>
+            <h3 className="mt-4 mb-3">Cột</h3>
             <ListGroupStyled>{seats}</ListGroupStyled>
           </div>
         )}

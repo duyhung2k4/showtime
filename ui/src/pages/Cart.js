@@ -164,9 +164,8 @@ const Cart = (props) => {
                           <Nav.Item>
                             <Nav.Link
                               eventKey="login"
-                              className={`${styles.link} ${
-                                tab === "login" && styles.activeLink
-                              }`}
+                              className={`${styles.link} ${tab === "login" && styles.activeLink
+                                }`}
                             >
                               Đăng nhập
                             </Nav.Link>
@@ -174,9 +173,8 @@ const Cart = (props) => {
                           <Nav.Item>
                             <Nav.Link
                               eventKey="guest"
-                              className={`${styles.link} ${
-                                tab === "guest" && styles.activeLink
-                              }`}
+                              className={`${styles.link} ${tab === "guest" && styles.activeLink
+                                }`}
                             >
                               Khách
                             </Nav.Link>
@@ -191,7 +189,7 @@ const Cart = (props) => {
                     <hr className="w-100" />
                     <section className={styles.footer}>
                       <h3 className="mt-3 mb-3 w-100">
-                        Tổng tiền: {totalPrice}€
+                        Tổng tiền: {totalPrice}VND
                       </h3>
                       <MainButton
                         className={styles.payBtn}

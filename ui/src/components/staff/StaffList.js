@@ -21,18 +21,18 @@ const StaffList = ({ data, onDelete }) => {
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Vorname</th>
-          <th scope="col">Nachname</th>
-          <th scope="col">Benutzername</th>
+          <th scope="col">Tên</th>
+          <th scope="col">Họ</th>
+          <th scope="col">Tên đăng nhập</th>
           <th scope="col">Email</th>
-          <th scope="col">Aktionen</th>
+          <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
         {(!tableItems || tableItems.length <= 0) && (
           <tr>
             <td colSpan={6} className="text-center text-muted">
-              Keine Mitarbeiter vorhanden
+              Không có nhân viên nào
             </td>
           </tr>
         )}

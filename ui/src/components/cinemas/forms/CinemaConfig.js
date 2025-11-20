@@ -154,7 +154,7 @@ const CinemaConfig = (props) => {
       <hr />
       <div className="d-flex flex-row justify-content-center gap-3">
         <Form.Group className="mb-3" controlId="rowCnt">
-          <Form.Label>Reihen</Form.Label>
+          <Form.Label>Hàng</Form.Label>
           <Form.Control
             type="number"
             value={rowCnt}
@@ -163,7 +163,7 @@ const CinemaConfig = (props) => {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="colCnt">
-          <Form.Label>Sitzplätze</Form.Label>
+          <Form.Label>Cột</Form.Label>
           <Form.Control
             type="number"
             value={colCnt}
@@ -175,7 +175,7 @@ const CinemaConfig = (props) => {
       <hr />
       <div className="d-flex w-100 justify-content-center">
         <Form.Group className={styles.typeSelector} controlId="colCnt">
-          <Form.Label>Sitzplatz Typ</Form.Label>
+          <Form.Label>Loại ghế</Form.Label>
           <Form.Select
             aria-label="Sitzplatztyp"
             onChange={changeSeatTypeHandler}

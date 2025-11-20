@@ -3,7 +3,7 @@ const option = agrs.slice(3, agrs.length);
 
 const apply = async () => {
     try {
-        const buildHelm = await $`helm upgrade --install cinema-api -f k8s/values.yaml -n dev k8s`;
+        const buildHelm = await $`helm upgrade --install strip-api -f k8s/values.yaml -n dev k8s`;
         console.log(buildHelm.stdout)
     } catch (error) {
         console.log("ERROR: ", error);
@@ -12,7 +12,7 @@ const apply = async () => {
 
 const stop = async () => {
     try {
-        const stopHelm = await $`helm uninstall cinema-api -n dev`;
+        const stopHelm = await $`helm uninstall strip-api -n dev`;
         console.log(stopHelm.stdout)
     } catch (error) {
         console.log("ERROR: ", error);

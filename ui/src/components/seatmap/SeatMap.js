@@ -22,11 +22,11 @@ const SeatMap = (props) => {
     ),
   ].filter((type) => !!type);
 
-  const legend = !props.editMode && types.map((type, i) => <Badge key={i} style={{backgroundColor: type.colorHEX}}>{type.title}</Badge>);
+  const legend = !props.editMode && types.map((type, i) => <Badge key={i} style={{ backgroundColor: type.colorHEX }}>{type.title}</Badge>);
 
   return (
     <div className={classes}>
-      <p className={styles.screenText}>Leinwand</p>
+      <p className={styles.screenText}>Bản vẽ</p>
       <div className={styles.screen} />
       {rows}
       {!props.editMode && <div className={styles.legend}>{legend}</div>}

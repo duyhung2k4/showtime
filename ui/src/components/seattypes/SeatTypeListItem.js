@@ -17,7 +17,7 @@ const SeatTypeListItem = (props) => {
       <Card className={styles.card}>
         <Card.Header className={styles.header}>{data.title}</Card.Header>
         <Card.Body style={{ backgroundColor: data.colorHEX }}>
-          {data.price}€
+          {data.price}VND
         </Card.Body>
         <Card.Footer className="d-flex justify-content-center gap-2">
           <Button variant="danger" onClick={() => props.onDelete(data)}>

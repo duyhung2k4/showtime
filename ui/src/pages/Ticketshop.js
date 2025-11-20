@@ -218,7 +218,7 @@ const Ticketshop = (props) => {
 
                 <div className={styles.cart}>
                   <h3>Vé đã chọn</h3>
-                  <h5 className="mt-3">Tổng tiền: {totalPrice} € </h5>
+                  <h5 className="mt-3">Tổng tiền: {totalPrice} VND </h5>
                   <MainButton
                     disabled={selectedTickets?.length <= 0}
                     onClick={goToCartHandler}
