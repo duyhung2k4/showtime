@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY package*.json ./
 RUN npm install --force
+RUN npm i -f webrtc-adapter
 
 COPY . .
 RUN npm run build

@@ -113,9 +113,9 @@ const ProgramPlan = (props) => {
   const timeOptionsData = {
     default: timeFilter,
     options: [
-      { text: "Komplettes Programm", value: "all" },
-      { text: "Heute", value: "today" },
-      { text: "Wochenende", value: "weekend" },
+      { text: "Toàn bộ chương trình", value: "all" },
+      { text: "Hôm nay", value: "today" },
+      { text: "Cuối tuần", value: "weekend" },
     ],
   };
 
