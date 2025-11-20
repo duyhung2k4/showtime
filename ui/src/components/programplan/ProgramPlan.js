@@ -140,7 +140,7 @@ const ProgramPlan = (props) => {
       {!isFetching &&
         (!movies || movies?.length <= 0 || movieList?.length <= 0) && (
           <h2 className="text-muted text-center mt-4 mb-3">
-            Keine Filme vorhanden
+            Không có phim nào
           </h2>
         )}
     </>

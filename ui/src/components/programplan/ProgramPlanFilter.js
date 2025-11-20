@@ -37,10 +37,10 @@ const ProgramPlanFilter = ({
         ))}
       </Form.Select>
       <CheckboxDropDown data={genreOptions} onChange={onSelectGenre}>
-        Genres
+        Thể loại
       </CheckboxDropDown>
       <CheckboxDropDown data={ageOptions} onChange={onSelectFsk}>
-        FSK
+        Độ tuổi
       </CheckboxDropDown>
     </div>
   );
