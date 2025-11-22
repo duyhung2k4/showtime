@@ -87,32 +87,32 @@ const Screeningplan = (props) => {
         <thead>
           <tr className={styles.weekdays}>
             <th>
-              Mo
-              {!props.editMode && `, ${getNextDate(1).toLocaleDateString()}`}
+              T2
+              {!props.editMode && `, ${getNextDate(1).toLocaleDateString("vi-VN")}`}
             </th>
             <th>
-              Di
-              {!props.editMode && `, ${getNextDate(2).toLocaleDateString()}`}
+              T3
+              {!props.editMode && `, ${getNextDate(2).toLocaleDateString("vi-VN")}`}
             </th>
             <th>
-              Mi
-              {!props.editMode && `, ${getNextDate(3).toLocaleDateString()}`}
+              T4
+              {!props.editMode && `, ${getNextDate(3).toLocaleDateString("vi-VN")}`}
             </th>
             <th>
-              Do
-              {!props.editMode && `, ${getNextDate(4).toLocaleDateString()}`}
+              T5
+              {!props.editMode && `, ${getNextDate(4).toLocaleDateString("vi-VN")}`}
             </th>
             <th>
-              Fr
-              {!props.editMode && `, ${getNextDate(5).toLocaleDateString()}`}
+              T6
+              {!props.editMode && `, ${getNextDate(5).toLocaleDateString("vi-VN")}`}
             </th>
             <th>
-              Sa
-              {!props.editMode && `, ${getNextDate(6).toLocaleDateString()}`}
+              T7
+              {!props.editMode && `, ${getNextDate(6).toLocaleDateString("vi-VN")}`}
             </th>
             <th>
-              So
-              {!props.editMode && `, ${getNextDate(0).toLocaleDateString()}`}
+              CN
+              {!props.editMode && `, ${getNextDate(0).toLocaleDateString("vi-VN")}`}
             </th>
           </tr>
         </thead>

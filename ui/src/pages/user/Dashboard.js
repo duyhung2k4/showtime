@@ -13,6 +13,7 @@ import {
   QrCodeScan,
   TagFill,
   TicketFill,
+  BarChartFill,
 } from "react-bootstrap-icons";
 
 const Dashboard = (props) => {
@@ -50,9 +51,14 @@ const Dashboard = (props) => {
               )}
 
               {(user.role === ROLES.ADMIN || user.role === ROLES.STAFF) && (
-                <DashboardListItem linkTo="/tickets/validation">
-                  <QrCodeScan /> Quét vé
-                </DashboardListItem>
+                <>
+                  <DashboardListItem linkTo="/tickets/validation">
+                    <QrCodeScan /> Quét vé
+                  </DashboardListItem>
+                  <DashboardListItem linkTo="/admin/statistics">
+                    <BarChartFill /> Thống kê
+                  </DashboardListItem>
+                </>
               )}
 
               <DashboardListItem linkTo="/user/tickets">

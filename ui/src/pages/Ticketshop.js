@@ -187,12 +187,12 @@ const Ticketshop = (props) => {
                       {screening.scheduledScreening.cinema.title}
                     </h2>
                     <h4 className="mt-3">
-                      {new Date(screening.date).toLocaleString("de-de", {
+                      {new Date(screening.date).toLocaleString("vi-VN", {
                         weekday: "long",
                       })}
                     </h4>
                     <h4>
-                      {new Date(screening.date).toLocaleDateString()},{" "}
+                      {new Date(screening.date).toLocaleDateString("vi-VN")},{" "}
                       {screening.scheduledScreening.time}
                     </h4>
                   </div>

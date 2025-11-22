@@ -25,6 +25,7 @@ import { ROLES } from "./constants";
 import Dashboard from "./pages/user/Dashboard";
 import Account from "./pages/user/Account";
 import Staff from "./pages/admin/Staff";
+import Statistics from "./pages/admin/Statistics";
 import NavBar from "./components/layout/NavBar";
 import Footer from "./components/layout/Footer";
 import FlashController from "./components/flash/FlashController";
@@ -72,6 +73,7 @@ function App() {
             }
           >
             <Route path="/tickets/validation" element={<TicketValidation />} />
+            <Route path="/admin/statistics" element={<Statistics />} />
           </Route>
 
           {/* Admin */}
@@ -92,6 +94,7 @@ function App() {
             <Route path="screenings/edit" element={<EditScreenings />} />
             <Route path="seattypes" element={<SeatTypes />} />
             <Route path="staff" element={<Staff />} />
+            <Route path="statistics" element={<Statistics />} />
           </Route>
 
           {/* Fallback */}

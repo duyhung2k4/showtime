@@ -12,12 +12,11 @@ const TicketListItem = (props) => {
 
   const date = new Date(ticket.datetime);
   const day = date
-    .toLocaleString("de-de", {
+    .toLocaleString("vi-VN", {
       weekday: "long",
-    })
-    .slice(0, 2);
-  const dateString = date.toLocaleDateString();
-  const timeString = date.toLocaleTimeString();
+    });
+  const dateString = date.toLocaleDateString("vi-VN");
+  const timeString = date.toLocaleTimeString("vi-VN");
 
   return (
     <motion.div
@@ -32,7 +31,7 @@ const TicketListItem = (props) => {
           <h2>{ticket.movie.title}</h2>
           <h3 className="mt-1">{ticket.cinema}</h3>
           <MainButton className={styles.button} onClick={showDetails}>
-            Details
+            Chi tiết
           </MainButton>
         </div>
         <div className={styles.date}>

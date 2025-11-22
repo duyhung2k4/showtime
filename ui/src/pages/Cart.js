@@ -137,12 +137,12 @@ const Cart = (props) => {
                         {cart.screening.scheduledScreening.cinema.title}
                       </h3>
                       <h4 className="mt-1">
-                        {new Date(cart.screening.date).toLocaleString("de-de", {
+                        {new Date(cart.screening.date).toLocaleString("vi-VN", {
                           weekday: "long",
                         })}
                       </h4>
                       <h4>
-                        {new Date(cart.screening.date).toLocaleDateString()},{" "}
+                        {new Date(cart.screening.date).toLocaleDateString("vi-VN")},{" "}
                         {cart.screening.scheduledScreening.time}
                       </h4>
                       <h4 className="mt-1">

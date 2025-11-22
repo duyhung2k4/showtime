@@ -8,7 +8,7 @@ const PosterWeekCnt = ({ src, startdate, className }) => {
   return (
     <div className={classes}>
       <Image src={src} className={styles.cover} />
-      <p className={styles.weeks}>{getWeekCounter(startdate)}. Woche</p>
+      <p className={styles.weeks}>Tuần {getWeekCounter(startdate)}</p>
     </div>
   );
 };

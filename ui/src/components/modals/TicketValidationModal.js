@@ -48,7 +48,7 @@ const TicketValidationModal = ({ ticket, onClose, show }) => {
             <h4>Rạp chiếu:</h4>
             <p> {ticket.cinema}</p>
             <h4>Thời gian:</h4>
-            <p> {new Date(ticket.datetime).toLocaleString()}</p>
+            <p> {new Date(ticket.datetime).toLocaleString("vi-VN")}</p>
             <h4>Khách hàng:</h4>
             <p>
               {" "}
