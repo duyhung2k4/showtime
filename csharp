@@ -1,0 +1,8 @@
+auth-api/
+├─ charts/               # Subcharts nếu có
+├─ templates/            # Template YAML: deployment, service, ingress
+│  ├─ deployment.yaml
+│  ├─ service.yaml
+│  ├─ ingress.yaml
+├─ values.yaml           # Giá trị cấu hình mặc định
+├─ Chart.yaml            # Metadata Helm chart

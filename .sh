@@ -1,0 +1,1 @@
+docker build -t showtime/auth-api:1.0 ./auth-api
